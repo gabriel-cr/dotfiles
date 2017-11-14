@@ -1,5 +1,4 @@
 #/bin/bash
-set -e
 
 # get pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -14,10 +13,10 @@ cd ~/.vim/bundle && \
 git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
 # syntastic-python
-sudo pip3 install flake8
+#sudo pip3 install flake8
 
 # syntastic-shellcheck
-sudo apt-get install shellcheck
+#sudo apt-get install shellcheck
 
 # neocomplete
 git clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/neocomplete

@@ -5,6 +5,9 @@ set expandtab ts=4 sw=4 ai
 set hlsearch
 " set persistent undo
 set undofile
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
 
 " pathogen loader
 execute pathogen#infect()
@@ -20,10 +23,11 @@ nnoremap <F4> :NERDTreeToggle<CR>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
+noremap <C-w>p :SyntasticCheck<CR>
+noremap <C-w>l :SyntasticToggleMode<CR>
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_sh_checkers = ['shellcheck']
@@ -43,3 +47,7 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
 " Remove trailing whitespaces
 autocmd BufWritePre * :%s/\s\+$//e
+
+" vim airline
+set laststatus=2
+let g:airline_symbols_ascii = 1
