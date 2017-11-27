@@ -2,7 +2,7 @@
 
 # get pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+wget https://tpo.pe/pathogen.vim -O ~/.vim/autoload/pathogen.vim
 
 # nerdtree
 mkdir -p ~/.vim/bundle
