@@ -1,6 +1,6 @@
 " generic stuff
 set list
-set listchars=trail:.
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set expandtab ts=4 sw=4 ai
 set hlsearch
 " set persistent undo
