@@ -20,3 +20,6 @@ git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
 # neocomplete
 git clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/neocomplete
+
+# vim-go
+git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
