@@ -34,6 +34,8 @@ let g:syntastic_sh_checkers = ['shellcheck']
 
 " show line numbers
 set number
+" show column
+set statusline+=%l\:%c\ %F
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
